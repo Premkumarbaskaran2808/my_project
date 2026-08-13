@@ -163,7 +163,7 @@ function initializeParticles() {
     // Animation loop
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = 'rgba(255, 105, 180, 0.3)';
+        ctx.fillStyle = 'rgba(30, 136, 229, 0.3)';
 
         particles.forEach((p, index) => {
             // Update position
