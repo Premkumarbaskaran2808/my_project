@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Anniversary 💕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="title">Happy Anniversary 💕</h1>
+            <p class="subtitle">Our Love Story</p>
+        </header>
+
+        <!-- Countdown Timer -->
+        <section class="countdown-section">
+            <h2>Time Together</h2>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="years">0</span>
+                    <span class="countdown-label">Years</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="days">0</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="hours">0</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="minutes">0</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section class="message-section">
+            <div class="message-card">
+                <h2>A Special Message for You</h2>
+                <p>
+                    Every moment with you is a treasure. Thank you for all the love, laughter, 
+                    and memories we've shared. Here's to many more adventures together! 💝
+                </p>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="gallery-section">
+            <h2>Our Memories</h2>
+            <div class="gallery-container">
+                <div class="gallery-wrapper">
+                    <img src="images/photo1.jpg" alt="Our Memory 1" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23ffd6e8%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22 fill=%22%23666%22%3EAdd Photo 1%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="gallery-wrapper">
+                    <img src="images/photo2.jpg" alt="Our Memory 2" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23ffd6e8%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22 fill=%22%23666%22%3EAdd Photo 2%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="gallery-wrapper">
+                    <img src="images/photo3.jpg" alt="Our Memory 3" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23ffd6e8%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22 fill=%22%23666%22%3EAdd Photo 3%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="gallery-wrapper">
+                    <img src="images/photo4.jpg" alt="Our Memory 4" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23ffd6e8%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22 fill=%22%23666%22%3EAdd Photo 4%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="gallery-wrapper">
+                    <img src="images/photo5.jpg" alt="Our Memory 5" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23ffd6e8%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22 fill=%22%23666%22%3EAdd Photo 5%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="gallery-wrapper">
+                    <img src="images/photo6.jpg" alt="Our Memory 6" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23ffd6e8%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22 fill=%22%23666%22%3EAdd Photo 6%3C/text%3E%3C/svg%3E'">
+                </div>
+            </div>
+            <p class="gallery-hint">Replace photo1.jpg, photo2.jpg, etc. in the images/ folder</p>
+        </section>
+
+        <!-- Slideshow Section -->
+        <section class="slideshow-section">
+            <h2>Featured Moment</h2>
+            <div class="slideshow-container">
+                <img id="slideshow" src="images/photo1.jpg" alt="Slideshow" class="slideshow-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22400%22%3E%3Crect fill=%22%23ffd6e8%22 width=%22500%22 height=%22400%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2224%22 fill=%22%23666%22%3EAdd Your Photos!%3C/text%3E%3C/svg%3E'">
+                <div class="slideshow-controls">
+                    <button class="slide-btn prev" onclick="previousSlide()">❮</button>
+                    <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">6</span></span>
+                    <button class="slide-btn next" onclick="nextSlide()">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Meter -->
+        <section class="love-meter-section">
+            <h2>How Much I Love You</h2>
+            <div class="love-meter">
+                <div class="love-bar">
+                    <div class="love-fill" id="loveFill"></div>
+                </div>
+                <p class="love-text">∞ (Infinite!)</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with 💕 for the one I love</p>
+            <p id="anniversary-date">Anniversary: [Add your date]</p>
+        </footer>
+    </div>
+
+    <!-- Floating Particles -->
+    <canvas id="particles"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
