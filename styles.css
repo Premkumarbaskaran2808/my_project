@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #ffe5ec 0%, #fff0f5 50%, #ffe5f0 100%);
+    background: linear-gradient(135deg, #E3F2FD 0%, #F0F7FF 50%, #E1F5FE 100%);
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
@@ -45,6 +45,29 @@ body {
     }
 }
 
+/* Crackers Burst Effect */
+.cracker {
+    position: fixed;
+    font-size: 2rem;
+    pointer-events: none;
+    z-index: 9999;
+    animation: crackBurst 1.5s ease-out forwards;
+}
+
+@keyframes crackBurst {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(calc(var(--vx) * 150px), calc(var(--vy) * 150px)) scale(0) rotate(360deg);
+    }
+}
+
 /* Main Container */
 .container {
     max-width: 1000px;
@@ -63,15 +86,15 @@ body {
 
 .title {
     font-size: 3.5rem;
-    color: #ff69b4;
-    text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.2);
+    color: #1976D2;
+    text-shadow: 2px 2px 4px rgba(25, 118, 210, 0.2);
     margin-bottom: 10px;
     letter-spacing: 2px;
 }
 
 .subtitle {
     font-size: 1.5rem;
-    color: #d946a6;
+    color: #1565C0;
     font-weight: 300;
     letter-spacing: 3px;
 }
@@ -93,13 +116,13 @@ body {
     border-radius: 20px;
     padding: 40px;
     margin-bottom: 40px;
-    box-shadow: 0 10px 40px rgba(255, 105, 180, 0.15);
+    box-shadow: 0 10px 40px rgba(25, 118, 210, 0.15);
     text-align: center;
     animation: fadeInUp 1s ease-out 0.2s both;
 }
 
 .countdown-section h2 {
-    color: #ff69b4;
+    color: #1976D2;
     font-size: 2rem;
     margin-bottom: 30px;
 }
@@ -115,11 +138,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, #ffd6e8, #fff0f5);
+    background: linear-gradient(135deg, #BBDEFB, #E3F2FD);
     padding: 20px 30px;
     border-radius: 15px;
     min-width: 100px;
-    border: 2px solid #ff69b4;
+    border: 2px solid #1976D2;
     transition: transform 0.3s ease;
 }
 
@@ -130,12 +153,12 @@ body {
 .countdown-value {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #ff1493;
+    color: #0D47A1;
 }
 
 .countdown-label {
     font-size: 0.9rem;
-    color: #d946a6;
+    color: #1565C0;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 5px;
@@ -156,26 +179,43 @@ body {
 .message-section {
     margin-bottom: 40px;
     animation: fadeInUp 1s ease-out 0.4s both;
+    text-align: center;
 }
 
-.message-card {
-    background: rgba(255, 255, 255, 0.95);
-    border-left: 5px solid #ff69b4;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 40px rgba(255, 105, 180, 0.1);
+.mail-icon-btn {
+    display: inline-flex;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #2196F3, #1565C0);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 10px 40px rgba(25, 118, 210, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    margin: 0 auto 20px;
 }
 
-.message-card h2 {
-    color: #ff69b4;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
+.mail-icon-btn:hover {
+    transform: scale(1.1) rotateZ(5deg);
+    box-shadow: 0 15px 50px rgba(25, 118, 210, 0.5);
 }
 
-.message-card p {
-    color: #555;
-    line-height: 1.8;
-    font-size: 1.1rem;
+.mail-icon-btn:active {
+    transform: scale(0.95);
+}
+
+.mail-icon {
+    font-size: 4rem;
+    display: block;
+}
+
+.message-hint {
+    color: #1976D2;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 /* Gallery Section */
@@ -186,7 +226,7 @@ body {
 
 .gallery-section h2 {
     text-align: center;
-    color: #ff69b4;
+    color: #1976D2;
     margin-bottom: 30px;
     font-size: 2rem;
 }
@@ -202,7 +242,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.15);
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.15);
     transition: transform 0.3s ease;
 }
 
@@ -235,13 +275,13 @@ body {
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 40px;
-    box-shadow: 0 10px 40px rgba(255, 105, 180, 0.15);
+    box-shadow: 0 10px 40px rgba(25, 118, 210, 0.15);
     text-align: center;
     animation: fadeInUp 1s ease-out 0.8s both;
 }
 
 .slideshow-section h2 {
-    color: #ff69b4;
+    color: #1976D2;
     margin-bottom: 20px;
     font-size: 1.5rem;
 }
@@ -282,7 +322,7 @@ body {
 }
 
 .slide-btn {
-    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    background: linear-gradient(135deg, #2196F3, #1565C0);
     color: white;
     border: none;
     width: 45px;
@@ -291,12 +331,12 @@ body {
     font-size: 1.2rem;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
 }
 
 .slide-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.5);
+    box-shadow: 0 6px 20px rgba(25, 118, 210, 0.5);
 }
 
 .slide-btn:active {
@@ -304,7 +344,7 @@ body {
 }
 
 .slide-counter {
-    color: #ff69b4;
+    color: #1976D2;
     font-weight: bold;
     font-size: 1rem;
 }
@@ -315,13 +355,13 @@ body {
     border-radius: 20px;
     padding: 40px;
     margin-bottom: 40px;
-    box-shadow: 0 10px 40px rgba(255, 105, 180, 0.15);
+    box-shadow: 0 10px 40px rgba(25, 118, 210, 0.15);
     text-align: center;
     animation: fadeInUp 1s ease-out 1s both;
 }
 
 .love-meter-section h2 {
-    color: #ff69b4;
+    color: #1976D2;
     margin-bottom: 30px;
     font-size: 1.5rem;
 }
@@ -332,21 +372,21 @@ body {
 }
 
 .love-bar {
-    background: #ffe5ec;
+    background: #E3F2FD;
     height: 30px;
     border-radius: 20px;
     overflow: hidden;
-    border: 3px solid #ff69b4;
+    border: 3px solid #1976D2;
     margin-bottom: 15px;
 }
 
 .love-fill {
     height: 100%;
-    background: linear-gradient(90deg, #ff69b4, #ff1493);
+    background: linear-gradient(90deg, #2196F3, #0D47A1);
     width: 100%;
     animation: fillUp 1.5s ease-out;
     border-radius: 17px;
-    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    box-shadow: 0 0 20px rgba(25, 118, 210, 0.5);
 }
 
 @keyframes fillUp {
@@ -360,7 +400,7 @@ body {
 
 .love-text {
     font-size: 1.5rem;
-    color: #ff1493;
+    color: #0D47A1;
     font-weight: bold;
 }
 
@@ -368,8 +408,8 @@ body {
 .footer {
     text-align: center;
     padding: 30px;
-    color: #d946a6;
-    border-top: 2px solid rgba(255, 105, 180, 0.2);
+    color: #1565C0;
+    border-top: 2px solid rgba(25, 118, 210, 0.2);
     margin-top: 50px;
     animation: fadeInUp 1s ease-out 1.2s both;
 }
