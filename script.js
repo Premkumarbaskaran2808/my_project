@@ -7,6 +7,7 @@ const ANNIVERSARY_DATE = new Date('2022-08-28'); // Format: 'YYYY-MM-DD'
 
 // Current slide index for slideshow
 let currentSlide = 0;
+let crackersTriggered = false; // Track if crackers effect has been triggered
 const photos = [
     'images/photo1.jpg',
     'images/photo2.jpg',
@@ -34,11 +35,12 @@ function updateCountdown() {
     const now = new Date();
     const difference = now - ANNIVERSARY_DATE;
 
-    // Calculate years, days, hours, minutes
+    // Calculate years, days, hours, minutes, seconds
     const millisecondsPerYear = 365.25 * 24 * 60 * 60 * 1000;
     const millisecondsPerDay = 24 * 60 * 60 * 1000;
     const millisecondsPerHour = 60 * 60 * 1000;
     const millisecondsPerMinute = 60 * 1000;
+    const millisecondsPerSecond = 1000;
 
     const years = Math.floor(difference / millisecondsPerYear);
     const remainderAfterYears = difference % millisecondsPerYear;
@@ -47,12 +49,61 @@ function updateCountdown() {
     const hours = Math.floor(remainderAfterDays / millisecondsPerHour);
     const remainderAfterHours = remainderAfterDays % millisecondsPerHour;
     const minutes = Math.floor(remainderAfterHours / millisecondsPerMinute);
+    const remainderAfterMinutes = remainderAfterHours % millisecondsPerMinute;
+    const seconds = Math.floor(remainderAfterMinutes / millisecondsPerSecond);
 
     // Update DOM
     document.getElementById('years').textContent = years;
     document.getElementById('days').textContent = days;
     document.getElementById('hours').textContent = hours;
     document.getElementById('minutes').textContent = minutes;
+    document.getElementById('seconds').textContent = seconds;
+
+    // Trigger crackers effect when 4 years completed
+    if (years >= 4 && !crackersTriggered) {
+        crackersTriggered = true;
+        burstCrackers();
+    }
+}
+
+// ==========================================
+// CRACKERS BURST EFFECT
+// ==========================================
+function burstCrackers() {
+    const crackerEmojis = ['🎉', '✨', '🎊', '💥', '⭐', '🌟'];
+    const container = document.body;
+
+    // Burst crackers multiple times
+    for (let burst = 0; burst < 3; burst++) {
+        setTimeout(() => {
+            for (let i = 0; i < 30; i++) {
+                const cracker = document.createElement('div');
+                cracker.className = 'cracker';
+                cracker.textContent = crackerEmojis[Math.floor(Math.random() * crackerEmojis.length)];
+                
+                // Random starting position (center of screen)
+                const startX = window.innerWidth / 2;
+                const startY = window.innerHeight / 2;
+                
+                cracker.style.left = startX + 'px';
+                cracker.style.top = startY + 'px';
+                
+                // Random angle and velocity
+                const angle = (Math.PI * 2 * i) / 30;
+                const velocity = 5 + Math.random() * 5;
+                const vx = Math.cos(angle) * velocity;
+                const vy = Math.sin(angle) * velocity;
+                
+                cracker.style.setProperty('--vx', vx);
+                cracker.style.setProperty('--vy', vy);
+                
+                container.appendChild(cracker);
+                
+                // Remove after animation ends
+                setTimeout(() => cracker.remove(), 1500);
+            }
+        }, burst * 500); // Stagger the bursts
+    }
 }
 
 // ==========================================
