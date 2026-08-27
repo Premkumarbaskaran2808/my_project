@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message for You 💝</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .message-page-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .message-page-content {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 700px;
+            box-shadow: 0 20px 60px rgba(25, 118, 210, 0.2);
+            animation: slideInUp 0.8s ease-out;
+            text-align: center;
+            position: relative;
+        }
+
+        .message-page-content h1 {
+            color: #1976D2;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            animation: fadeInDown 0.8s ease-out 0.2s both;
+        }
+
+        .message-page-content .message-text {
+            color: #333;
+            line-height: 2;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            font-family: 'Georgia', 'Garamond', serif;
+            font-style: italic;
+            text-align: left;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .message-signature {
+            text-align: left;
+            font-family: 'Georgia', 'Garamond', serif;
+            font-size: 1.1rem;
+            color: #1976D2;
+            font-weight: 500;
+            margin-bottom: 30px;
+            font-style: italic;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .message-page-content .emoji {
+            font-size: 3rem;
+            display: block;
+            margin: 20px 0;
+            animation: pulse 2s ease-in-out infinite 0.4s;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #2196F3, #1565C0);
+            color: white;
+            padding: 12px 40px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(25, 118, 210, 0.3);
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(25, 118, 210, 0.4);
+        }
+
+        .back-button:active {
+            transform: translateY(-1px);
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1) rotate(10deg);
+            }
+        }
+
+        /* Sparkle effect */
+        .sparkle {
+            position: fixed;
+            font-size: 1.5rem;
+            pointer-events: none;
+            z-index: 100;
+            animation: sparkleFloat 2s ease-out forwards;
+        }
+
+        @keyframes sparkleFloat {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(var(--tx), var(--ty)) scale(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .message-page-content {
+                padding: 30px;
+            }
+
+            .message-page-content h1 {
+                font-size: 2rem;
+            }
+
+            .message-page-content .message-text {
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+
+            .message-page-content .emoji {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .message-page-content {
+                padding: 20px;
+            }
+
+            .message-page-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .message-page-content .message-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <div class="message-page-container">
+        <div class="message-page-content">
+            <h1>A Special Message for You 💕</h1>
+            <span class="emoji">💝</span>
+            <p class="message-text">
+                My Dearest Poonakutty,<br><br>
+       Ithu namakku 4 th year anniversary di chellam.... but ennala innum andha 1st time nee love sonnatha marakkaveyyy mudiyathu chellam... 🖤
+       Enakku eppavumeyy andha naal oru special aana day tha chellam🥰... 
+       En lyf la thirumba andha maari oru naal varuma therla chellam💫... 
+       un face annaiku evalo happy aah irunthuchu innum enaku athu niyabagam iruku chellam😍... 
+       Atha paathu naan evalo happy ah irunthan nu express pannaveyyy mudiyathu chellam😻.... 
+       Unna evalovo kashta paduthirukkan chellam 😢 athukellam sorryyy...🤌 
+       Aana atha mattum vachi un mela love illa nu nenaikkatha chellam....
+       Enakku unna evalo pudikkum nu ennalayeyyy solla mudiyathu chellam🥰.... 
+       andha alavukku unna enakku pudikkum 🤗Indha naal namakku eppavumeyyy romba special ah irukanum chellam....🥰  
+       Un kooda iruka ella naalum enakku kedaicha periya gift chellam💫....
+       Let's fill it with more fun and happiest moments di chellam 🖤🩵
+            </p>
+            <div class="message-signature">
+                with love 💖,<br>
+                Porcupine
+            </div>
+            <button class="back-button" onclick="goBack()">← Back</button>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        // Create sparkle effects on page load
+        function createSparkles() {
+            const sparkleEmojis = ['✨', '💫', '⭐', '🌟'];
+            const container = document.body;
+
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'sparkle';
+                    sparkle.textContent = sparkleEmojis[Math.floor(Math.random() * sparkleEmojis.length)];
+                    
+                    // Random starting position around the message
+                    const x = Math.random() * window.innerWidth;
+                    const y = Math.random() * window.innerHeight;
+                    
+                    sparkle.style.left = x + 'px';
+                    sparkle.style.top = y + 'px';
+                    
+                    // Random direction
+                    const tx = (Math.random() - 0.5) * 200;
+                    const ty = (Math.random() - 0.5) * 200 - 100;
+                    
+                    sparkle.style.setProperty('--tx', tx + 'px');
+                    sparkle.style.setProperty('--ty', ty + 'px');
+                    
+                    container.appendChild(sparkle);
+                    
+                    setTimeout(() => sparkle.remove(), 2000);
+                }, i * 50);
+            }
+        }
+
+        // Floating Hearts
+        function createFloatingHearts() {
+            const container = document.getElementById('heartsContainer');
+            const heartEmojis = ['💕', '💖', '💗', '💝', '❤️'];
+
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+                heart.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(heart);
+
+                heart.addEventListener('animationend', function() {
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+                    heart.style.animationDelay = '0s';
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            createFloatingHearts();
+            createSparkles();
+        });
+    </script>
+</body>
+</html>
